@@ -1,0 +1,19 @@
+{
+  "name": "cfdemo",
+  "version": "0.0.1",
+  "description": "Demo project for CurrencyFair - node.js REST endpoint",
+  "main": "server.js",
+  "author": "Kamil Tunkiewicz <kamil.tunkiewicz@gmail.com>",
+  "license": "MIT",
+    "dependencies": {
+    "express": "4.x",
+    "mongodb": "*",
+    "monk": "*",
+    "validator": "*",
+    "body-parser": "*",
+    "frisby": "*",
+    "jasmine-node": "*",
+    "restler": "*",
+    "measured": "*"
+  }
+}
