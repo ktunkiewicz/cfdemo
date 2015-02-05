@@ -43,4 +43,4 @@ setInterval(function(){
         "timePlaced" : d.toString(),
         "originatingCountry" : randomCountry()
     });
-},50);
+},300);

@@ -60,13 +60,13 @@ class ProcessorCommand extends Command {
          * it will be triggered each 500ms
          */
         
-        $this->stats = new Stats($this->timespans);
-        
         $context = new ZMQContext();
         $socket = $context->getSocket(ZMQ::SOCKET_PUSH, 'cfdemo_pusher');
         $socket->connect("tcp://localhost:5555");
         
         while(true) {
+            $this->stats = new Stats($this->timespans);
+        
             foreach($this->timespans as $timespan) {
                 $query = Messages::where('timePlaced', '>', new DateTime('-1 '.$timespan))->get();
                 if ($query->count()) {
@@ -78,7 +78,8 @@ class ProcessorCommand extends Command {
             
             $results = $this->stats->compute();
             $socket->send(json_encode($results));
-
+	    
+	    unset($this->stats);
             usleep(500);
         }
         

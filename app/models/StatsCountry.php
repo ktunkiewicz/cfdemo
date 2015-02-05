@@ -6,7 +6,7 @@
 class StatsCountry {
     
     private $data = [];
-    private $min = 0;
+    private $min = 999;
     private $max = 0;
     private $avg = 0;
     private $totalSell = 0;
@@ -28,8 +28,8 @@ class StatsCountry {
         $this->count++;
         $this->tempRateSum += $data['rate'];
         $this->totalSell += $data['amountSell'];
-        if ($data['rate']<$this->min || $this->count == 0) { $this->min = $data['rate']; }
-        if ($data['rate']>$this->max || $this->count == 0) { $this->max = $data['rate']; }
+        if ($data['rate']<$this->min && $data['rate']!== 0) { $this->min = $data['rate']; }
+        if ($data['rate']>$this->max ) { $this->max = $data['rate']; }
     }
     
     /**

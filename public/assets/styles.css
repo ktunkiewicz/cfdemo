@@ -1,0 +1,51 @@
+body {
+    background: #223;
+    padding-top: 40px;
+    height: 100%;
+}
+
+html, .container, .mapRow, #mapContainer {
+    height: 100%;   
+}
+
+header {
+    position:absolute;
+    right: 20px;
+    top: 20px;
+}
+
+footer {
+    position:absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+#channel {
+    height: 36px;
+    padding: 5px 16px;
+}
+
+.dl-horizontal {
+  margin-bottom:0;
+}
+.dl-horizontal dt {
+    width: 100px;
+}
+.dl-horizontal dd {
+    margin-left: 110px;
+}
+.tooltip {
+  background: rgba(30,30,30,0.8);
+  padding: 10px;
+}
+#overview {
+  position:absolute;
+  bottom: 10px;
+  left: 30px;
+}
+.country {
+    -webkit-transition: fill 1s ease;
+    -moz-transition: fill 1s ease;
+    -o-transition: fill 1s ease;
+    transition: fill 1s ease;
+}
